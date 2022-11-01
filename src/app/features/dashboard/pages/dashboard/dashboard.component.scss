@@ -1,0 +1,27 @@
+.grid-container {
+  @apply grid h-screen w-screen;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main";
+}
+
+.header {
+  @apply bg-gray-100 shadow-sm;
+  z-index: 999;
+  grid-area: header;
+}
+
+.sidenav {
+  @apply bg-slate-600;
+  z-index: 1000;
+  grid-area: sidenav;
+}
+
+.main {
+  @apply bg-slate-200 overflow-y-auto;
+  grid-area: main;
+}
+
